@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>天てれリンク放送局告知情報入力フォーム</title>
+    <link type="text/css" href="index.css" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>天てれリンク放送局告知情報入力フォーム</h1>
+        <p>このページは、天てれリンク放送局隔週放送にて告知を入力するためのフォームです。</p>
+
+    </header>
+
+    <form name="submit-to-google-sheet">
+
+        <p>出演てれび戦士の名前を入力してください</p>
+        <input name="name" type="text" placeholder="出演てれび戦士の名前を入力してください" required>
+        <p>告知情報のリンクを入力してください</p>
+        <input name="url" type="text" placeholder="告知情報のリンクを入力してください" required>
+<p>&nbsp;</p>
+        <button class="send" type="submit">送信</button>
+    </form>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzYgaDZBybu0j3ZpGFkf3OWFSzVxuI8dZZgtkYlIRQpTe-Otuw/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+  setTimeout(function(){
+    window.location.href = 'success.html';
+  }, 1500);
+        })
+    </script>
+</body>
+
+</html>

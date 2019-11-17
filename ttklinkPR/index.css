@@ -1,0 +1,39 @@
+﻿body{
+        width: 90%;
+        margin-right: auto;
+        margin-left : auto;
+     text-align: center;
+     background: #fffd95;   
+     font-family: Meiryo;
+      padding: 0;
+     line-height: 1;
+        position:fixed:
+        }
+
+header {
+    background: #ffd800;
+    width: auto;
+    padding: auto;
+    text-align: center;
+    border: 1px solid #cccccc;
+    margin: 30px auto;
+    color: #000000;
+}
+
+button.send {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: #ffd800;
+    color: #000000;
+    border-style: none;
+}
+
+
+
+    button.send:hover {
+        background-color: #fffb46;
+        color: #808080;
+    }
+
+
